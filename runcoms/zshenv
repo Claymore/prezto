@@ -111,3 +111,7 @@ GOPATH=$HOME/go; export GOPATH
 # Colors
 
 export GREP_COLOR='1;33'
+
+if [ -e ~/.secrets ]; then
+    source ~/.secrets
+fi
