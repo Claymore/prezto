@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='vim'
+export VISUAL='vim'
 export PAGER='less'
 
 #
@@ -99,3 +99,15 @@ if [[ -d "$TMPDIR" ]]; then
   fi
 fi
 
+# Oracle
+
+PATH=$PATH:/usr/local/instantclient_11_2
+NLS_LANG=RUSSIAN_RUSSIA.UTF8; export NLS_LANG
+
+# Go
+
+GOPATH=$HOME/go; export GOPATH
+
+# Colors
+
+export GREP_COLOR='1;33'
