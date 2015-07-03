@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='/Users/claymore/.homebrew/bin/vim'
+export VISUAL='/Users/claymore/.homebrew/bin/vim'
 export PAGER='less'
 
 #
@@ -77,6 +77,9 @@ unset path_file
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  /Users/claymore/.homebrew/bin
+  /Users/claymore/go/bin
+  /Users/claymore/Library/Python/2.7/bin
   /usr/local/{bin,sbin}
   /usr/{bin,sbin}
   /{bin,sbin}
@@ -101,12 +104,15 @@ fi
 
 # Oracle
 
-PATH=$PATH:/usr/local/instantclient_11_2
-NLS_LANG=RUSSIAN_RUSSIA.UTF8; export NLS_LANG
+export NLS_LANG=RUSSIAN_RUSSIA.UTF8
 
 # Go
 
-GOPATH=$HOME/go; export GOPATH
+export GOPATH=$HOME/go
+
+# Docker
+
+export MACHINE_STORAGE_PATH=/Volumes/Warehouse/docker
 
 # Colors
 
@@ -115,3 +121,7 @@ export GREP_COLOR='1;33'
 if [ -e ~/.secrets ]; then
     source ~/.secrets
 fi
+
+# chruby
+source /Users/claymore/.homebrew/opt/chruby/share/chruby/chruby.sh
+source /Users/claymore/.homebrew/opt/chruby/share/chruby/auto.sh

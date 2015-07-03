@@ -18,5 +18,14 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias vim="stty stop undef -ixoff ; vim"
+alias vim="stty stop undef -ixoff ; /Users/claymore/.homebrew/bin/vim"
+alias fin-rev="ledger b Доходы Расходы -p 'this month' --effective"
+alias fin-in-p="ledger b Доходы -p 'this month' --effective -X RUR -% --depth 2"
+alias fin-ex-p="ledger b Расходы -p 'this month' --effective -X RUR -% --depth 2"
+alias fin-net="ledger b Активы Пассивы"
+alias fin-net-r="ledger b Активы Пассивы -X RUR"
+alias fin-budget="ledger b --effective --budget --period 'this month' Расходы Доходы"
 ttyctl -f
+
+# initilize fasd
+eval "$(fasd --init auto)"
