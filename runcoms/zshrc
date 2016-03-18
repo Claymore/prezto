@@ -19,6 +19,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 alias vim="stty stop undef -ixoff ; /Users/claymore/.homebrew/bin/vim"
+alias emacs="~/.homebrew/bin/emacsclient $@"
 alias fin-rev="ledger b Доходы Расходы -p 'this month' --effective"
 alias fin-in-p="ledger b Доходы -p 'this month' --effective -X RUR -% --depth 2"
 alias fin-ex-p="ledger b Расходы -p 'this month' --effective -X RUR -% --depth 2"
